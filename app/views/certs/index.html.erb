@@ -1,0 +1,37 @@
+<% content_for :head do %>
+  <h1>OpenVPN-Zertifikate</h1>
+<% end %>
+
+<h2>Neues Zertifikat erzeugen / herunterladen</h2>
+<i>Login: MAC-Adresse 1. Wireless-Lan-Interface, Password: MAC_Adresse 1. Ethernet-Interface</i>
+<p />
+<i>Hinweis: Im ersten Schritt muss der Key herunter geladen werden - erst danach kann das Zertifikat <br />
+Dies ist notwendig, da die Private Keys nicht persistent gespeichert werden</p>
+<ul>
+<li><%= link_to 'ap_cert.key', :action =>'ap_cert', :format => :key%></li>
+<li><%= link_to 'ap_cert.pem', :action => 'ap_cert', :format =>:pem%></li>
+<li><%= link_to 'ca_cert.pem', :action => 'ca_cert', :format => :pem%></li>
+<li><%= link_to 'dh1024.pem',  :action => "dh1024", :format => :pem%></li>
+ 
+</ul>
+
+
+<h2>Erzeugte Zertfikate</h2>
+<table>
+  <tr>
+    <th>wlan0</th>
+    <th>eth0</th>
+	<th>Fingerprint - MD5(.der) </th>
+	<th>Erzeugt am</th>
+  </tr>
+
+<% @certs.each do |cert| %>
+  <tr class="<%= cycle('odd','even') %>">
+    <td class="monospaced"><%= cert.wlan_mac %></td>
+    <td class="monospaced"><%= cert.eth0_mac %></td>
+	<td class="monospaced"><%= cert.fingerprint.scan(/.{1,4}/).join(':') %></td>
+  	<td><%= cert.created_at%></td>
+  </tr>
+<% end %>
+</table>
+<br />

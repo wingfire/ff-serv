@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  wlan_mac: MyString
+  eth0_mac: MyString
+  fingerprint: MyString
+  requesting_ip: MyString
+
+two:
+  wlan_mac: MyString
+  eth0_mac: MyString
+  fingerprint: MyString
+  requesting_ip: MyString

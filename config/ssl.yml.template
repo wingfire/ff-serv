@@ -1,0 +1,25 @@
+#Config file for easy_rsa
+development:
+  easy_rsa_path: /Users/jan/Documents/textmate/ff-serv/test/integration/easy_rsa/2.0
+  key_size: 1024
+  dh_size: 1024
+  key_path: "/Users/jan/Documents/textmate/ff-serv/test/integration/easy_rsa/2.0/keys"
+  openssl_path: "/opt/local/bin/openssl"
+  cert_issuer: "Freifunk-KBU"
+
+test:
+  easy_rsa_path: /Users/jan/Documents/textmate/ff-serv/test/integration/easy_rsa/2.0
+  key_size: 1024
+  dh_size: 1024
+  key_path: "/Users/jan/Documents/textmate/ff-serv/test/integration/easy_rsa/2.0/keys"
+  openssl_path: "/opt/local/bin/openssl"
+  cert_issuer: "Freifunk-KBU"
+  
+
+production:
+  easy_rsa_path: /Users/jan/Documents/textmate/ff-serv/test/integration/easy_rsa/2.0
+  key_size: 2048
+  dh_size: 2048
+  key_path: "/Users/jan/Documents/textmate/ff-serv/test/integration/easy_rsa/2.0/keys"
+  openssl_path: "/opt/local/bin/openssl"
+  cert_issuer: "Freifunk-KBU"

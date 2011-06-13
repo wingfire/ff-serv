@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Freifunk-Service</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body class="freifunk-yellow-bg">
+<div id="header">
+	<div id="head"><%= yield :head %></div>
+	<div id="logo" style="background-image: url(<%= image_path('banner.png') %>)">
+		<%= image_tag("banner_logo.png")%>
+	</div>
+</div>
+<div id="body" >
+<%= yield %>
+</div>
+</body>
+</html>
